@@ -405,7 +405,7 @@ function UserReuest(props) {
                                 outline: "none",
                               }}
                             >
-                              Cancel
+                              Reject
                             </Button>
                           </div>
                         )}
