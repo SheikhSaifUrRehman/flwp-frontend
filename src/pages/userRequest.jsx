@@ -121,6 +121,7 @@ function UserReuest(props) {
   ) => {
     let url = `${path}api/bid/accept-cancel`;
     const config = { headers: { "x-auth-token": user.token } };
+    dispatch(setLoading(true));
     await axios.post(
       url,
       {
@@ -131,6 +132,8 @@ function UserReuest(props) {
       },
       config
     );
+    getBids();
+    dispatch(setLoading(false));
   };
 
   const handleViewProfile = (id) => {
